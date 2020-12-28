@@ -1,0 +1,12 @@
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\bin\Release\LanguageToolAmar.exe.config
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\bin\Release\LanguageToolAmar.exe
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\bin\Release\LanguageToolAmar.pdb
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\bin\Release\JsonDiffPatchDotNet.dll
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\bin\Release\Newtonsoft.Json.dll
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\bin\Release\Newtonsoft.Json.xml
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\obj\Release\LanguageToolAmar.Form1.resources
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\obj\Release\LanguageToolAmar.Properties.Resources.resources
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\obj\Release\LanguageToolAmar.csproj.GenerateResource.cache
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\obj\Release\LanguageToolAmar.csproj.CopyComplete
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\obj\Release\LanguageToolAmar.exe
+C:\Users\Amar\Desktop\Workspace\LanguageToolGameart\LanguageToolAmar\obj\Release\LanguageToolAmar.pdb
