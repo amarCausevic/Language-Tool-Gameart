@@ -52,6 +52,8 @@
             this.diffStatusLbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.titleCheckBtn = new System.Windows.Forms.Button();
+            this.clearColorGridsBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.serverFileViewGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.localFileViewGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -251,7 +253,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(931, 598);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(450, 158);
+            this.groupBox1.Size = new System.Drawing.Size(423, 158);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
@@ -271,7 +273,7 @@
             this.diffStatusLbl.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diffStatusLbl.Location = new System.Drawing.Point(16, 42);
             this.diffStatusLbl.Name = "diffStatusLbl";
-            this.diffStatusLbl.Size = new System.Drawing.Size(428, 57);
+            this.diffStatusLbl.Size = new System.Drawing.Size(401, 57);
             this.diffStatusLbl.TabIndex = 0;
             this.diffStatusLbl.Text = "Status: ";
             // 
@@ -295,11 +297,37 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // titleCheckBtn
+            // 
+            this.titleCheckBtn.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleCheckBtn.Location = new System.Drawing.Point(1363, 618);
+            this.titleCheckBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.titleCheckBtn.Name = "titleCheckBtn";
+            this.titleCheckBtn.Size = new System.Drawing.Size(138, 42);
+            this.titleCheckBtn.TabIndex = 27;
+            this.titleCheckBtn.Text = "Title Check";
+            this.titleCheckBtn.UseVisualStyleBackColor = true;
+            this.titleCheckBtn.Click += new System.EventHandler(this.titleCheckBtn_Click);
+            // 
+            // clearColorGridsBtn
+            // 
+            this.clearColorGridsBtn.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearColorGridsBtn.Location = new System.Drawing.Point(1363, 680);
+            this.clearColorGridsBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.clearColorGridsBtn.Name = "clearColorGridsBtn";
+            this.clearColorGridsBtn.Size = new System.Drawing.Size(138, 42);
+            this.clearColorGridsBtn.TabIndex = 28;
+            this.clearColorGridsBtn.Text = "Clear Color (Grids)";
+            this.clearColorGridsBtn.UseVisualStyleBackColor = true;
+            this.clearColorGridsBtn.Click += new System.EventHandler(this.clearColorGridsBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1520, 768);
+            this.Controls.Add(this.clearColorGridsBtn);
+            this.Controls.Add(this.titleCheckBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.localWithServerChckBox);
@@ -362,6 +390,8 @@
         private System.Windows.Forms.Label diffStatusLbl;
         private System.Windows.Forms.Label sumDiffLbl;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button titleCheckBtn;
+        private System.Windows.Forms.Button clearColorGridsBtn;
     }
 }
 

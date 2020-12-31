@@ -494,9 +494,14 @@ namespace LanguageToolAmar
             }
         }
 
+        private void titleCheckBtn_Click(object sender, EventArgs e)
+        {
+            ColorAllTitleRows(serverFileViewGrid, localFileViewGrid);
+        }
+
         public void SetStatusLabel(JObject diffResult)
         {
-            diffStatusLbl.Text = "Status:" ;
+            diffStatusLbl.Text = "Status:";
             if (diffResult == null || diffResult.Count == 0)
             {
                 diffStatusLbl.Text = diffStatusLbl.Text += "BOTH FILES ARE THE SAME (CLEAN)";
@@ -508,6 +513,71 @@ namespace LanguageToolAmar
                 diffStatusLbl.Text = diffStatusLbl.Text += "THERE IS DIFFERENCE BETWEEN \n THESE TWO FILES(DIRTY)";
                 diffStatusLbl.ForeColor = Color.Salmon;
                 sumDiffLbl.Text = sumDiffLbl.Text += CleanDiffList(diffResult).Count.ToString();
+            }
+        }
+
+        private void clearColorGridsBtn_Click(object sender, EventArgs e)
+        {
+            ClearColorOnTheGrids(serverFileViewGrid, localFileViewGrid);
+        }
+
+        private void ColorAllTitleRows(DataGridView serverList, DataGridView localList)
+        {
+            if (serverList.RowCount != 0 || localList.RowCount != 0)
+            {
+                if (serverList != null)
+                {
+                    foreach (DataGridViewRow serverRow in serverList.Rows)
+                    {
+                        if (serverRow.Cells[0].Value.ToString().IndexOf("TITLE") >= 0 /*&& serverRow.Cells[0].Value.ToString().IndexOf("SUBTITLE") <= 0*/)
+                            serverList.Rows[serverRow.Index].DefaultCellStyle.BackColor = Color.LightSeaGreen;
+                    }
+                }
+
+                if (localList != null)
+                {
+                    foreach (DataGridViewRow localRow in localList.Rows)
+                    {
+                        if (localRow.Cells[0].Value.ToString().IndexOf("TITLE") >= 0 /*&& serverRow.Cells[0].Value.ToString().IndexOf("SUBTITLE") <= 0*/)
+                            localList.Rows[localRow.Index].DefaultCellStyle.BackColor = Color.LightSeaGreen;
+                    }
+                }
+            }
+            else if (serverList.RowCount == 0 && localList.RowCount == 0)
+            {
+                MessageBox.Show("[INFO]: Please load at least one grid", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void ClearColorOnTheGrids(DataGridView serverList, DataGridView localList)
+        {
+            if (serverList.RowCount != 0 || localList.RowCount != 0)
+            {
+                if (serverList != null)
+                {
+                    foreach (DataGridViewRow serverRow in serverList.Rows)
+                    {
+                        serverList.Rows[serverRow.Index].DefaultCellStyle.BackColor = Color.Empty;
+                        // TO-DO Handle this is implemented because of compare
+                        serverList.Rows[serverRow.Index].Cells[0].Style.BackColor = Color.Empty;
+                        serverList.Rows[serverRow.Index].Cells[1].Style.BackColor = Color.Empty;
+                    }
+                }
+
+                if (localList != null)
+                {
+                    foreach (DataGridViewRow localRow in localList.Rows)
+                    {
+                        localList.Rows[localRow.Index].DefaultCellStyle.BackColor = Color.Empty;
+                        // TO-DO Handle this is implemtented because of compare
+                        serverList.Rows[localRow.Index].Cells[0].Style.BackColor = Color.Empty;
+                        localList.Rows[localRow.Index].Cells[1].Style.BackColor = Color.Empty;
+                    }
+                }
+            }
+            else if(serverList.RowCount == 0 && localList.RowCount == 0)
+            {
+                MessageBox.Show("[INFO]: Please load at least one grid", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
